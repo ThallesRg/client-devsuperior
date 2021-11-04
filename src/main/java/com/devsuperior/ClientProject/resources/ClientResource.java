@@ -67,5 +67,11 @@ public class ClientResource {
 		return ResponseEntity.noContent().build();
 	}
 	
+	@DeleteMapping
+	public ResponseEntity<Void> deleteAll(){
+		service.deleteAll();
+		return ResponseEntity.noContent().build();
+	}
+	
 	
 }

@@ -73,4 +73,13 @@ public class ClientService {
 		}
 		
 	}
+	
+	public void deleteAll() {
+		try {
+			repository.deleteAll();
+		}
+		catch (DataIntegrityViolationException e) {
+			throw new DatabaseException("Integrity violation");
+		}
+	}
 }
